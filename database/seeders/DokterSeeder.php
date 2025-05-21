@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Dokter;
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class DokterSeeder extends Seeder
 {
@@ -12,6 +13,6 @@ class DokterSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        Dokter::factory(5)->create();
     }
 }

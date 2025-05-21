@@ -17,7 +17,13 @@ class DokterFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            "nama_dokter" => fake()->name(),
+            "spesialis" => fake()->randomElement([
+                "Anak","kulit","gizi","organ dalam"
+            ]),
+            "libur" => fake()->randomElement([
+                "Senin","Selasa","Rabu","Kamis","Jumat","Sabtu","minggu"
+            ])
         ];
     }
 }

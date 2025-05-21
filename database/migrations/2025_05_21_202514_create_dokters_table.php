@@ -15,9 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string("nama_dokter");
             $table->string("spesialis");
-            $table->string("hari");
-            $table->time("jam_awal");
-            $table->time("jam_akhir");
+            $table->string("libur");
             $table->timestamps();
         });
     }
