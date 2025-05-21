@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\BarangController;
+use App\Http\Controllers\BookingController;
+use App\Http\Controllers\DokterController;
 use App\Http\Controllers\MahasiswaController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -21,3 +23,5 @@ Route::resource('transaksi',TransaksiController::class);
 Route::resource("mahasiswa",MahasiswaController::class);
 Route::resource("mobil",MobilController::class);
 Route::resource("rental",RentalController::class);
+Route::resource("dokter",DokterController::class);
+Route::resource("booking",BookingController::class);

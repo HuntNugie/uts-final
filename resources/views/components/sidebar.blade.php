@@ -35,5 +35,12 @@
                 <a href="{{ route("rental.index") }}" class="dropdown-item  {{ request()->is("rental") ? "active" : ""}}"><i class="bi bi-ev-front-fill"></i> Rental</a>
             </div>
         </div>
+        <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="bi bi-hospital"></i>Booking Dokter </a>
+            <div class="dropdown-menu bg-transparent border-0">
+                <a href="{{ route("dokter.index") }}" class="dropdown-item  {{ request()->is("dokter") ? "active" : ""}}"><i class="bi bi-file-medical"></i> Dokter</a>
+                <a href="{{ route("booking.index") }}" class="dropdown-item  {{ request()->is("booking") ? "active" : ""}}"><i class="bi bi-clipboard2-pulse"></i> Booking</a>
+            </div>
+        </div>
     </div>
 </nav>
