@@ -45,7 +45,7 @@ class RentalController extends Controller
         }
         // cek rental tanggal awal tidak boleh lebih besar dari tanggal akhir
         if($request->tgl_awal >= $request->tgl_akhir){
-            return redirect()->route("rental.create")->with("error","tanggal awal tidak boleh lebih besar dari tanggal akhir");
+            return back()->with("error","tanggal awal tidak boleh lebih besar dari tanggal akhir");
         }
         Rental::create($valid);
         return redirect()->route("rental.index")->with("sukses","Berhasil merental mobil");
@@ -87,7 +87,7 @@ class RentalController extends Controller
         $rent = Rental::all();
         foreach($rent as $mob){
             if($mob->mobils_id == $valid["mobils_id"] && $mob->tgl_awal <= $valid["tgl_akhir"] && $mob->tgl_akhir >= $valid["tgl_awal"] && $mob->id != $rental->id){
-                return redirect()->route("rental.edit",$rental->id)->with("error","Di tanggal tersebut mobil masih di rental");
+                return back()->with("error","Di tanggal tersebut mobil masih di rental");
             }
         }
         $rental->update($valid);

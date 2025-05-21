@@ -7,7 +7,7 @@
     <div class="row justify-content-center">
         <div class="col-md-15">
             <div class="card">
-                <div class="card-header">{{ __('Daftar tabel Mobil') }}</div>
+                <div class="card-header">{{ __('Daftar tabel dokter') }}</div>
 
                 <div class="card-body">
                     <table id="myTable" class="display">
