@@ -1,6 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
+@if($errors->any())
+<script>
+    Swal.fire({
+  icon: "error",
+  title: "{!! implode($errors->all()) !!}",
+  text: "Something went wrong!",
+  footer: '<a href="#">Why do I have this issue?</a>'
+});
+</script>
+@endif
 <div class="container mt-5">
     <h2 class="mb-4">Tambah Data Barang</h2>
     <div class="card shadow-sm">

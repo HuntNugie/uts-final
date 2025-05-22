@@ -14,7 +14,7 @@ class BookingController extends Controller
      */
     public function index()
     {
-        return view("booking.index");
+        return view("booking.index",["bookings" => Booking::with("dokter")->get()]);
     }
 
     /**
@@ -45,7 +45,7 @@ class BookingController extends Controller
         }
         $pasien = Booking::all();
         foreach($pasien as $pas){
-            if($pas->dokter_id === $request->dokter_id && $pas->jam_awal <= $request->jam_akhir && $pas->jam_akhir >= $request->jam_awal){
+            if($pas->dokter_id == $request->dokter_id && $pas->jam_awal <= $request->jam_akhir && $pas->jam_akhir >= $request->jam_awal){
                 return back()->with("error","Jadwal dokter {$pas->dokter->nama_dokter} sudah terbokking saat di jam tersebut");
             }
         }
@@ -81,8 +81,9 @@ class BookingController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Booking $booking)
     {
-        //
+        $booking->delete();
+        return redirect()->route("booking.index")->with("sukses","Berhasil menghapus data");
     }
 }
