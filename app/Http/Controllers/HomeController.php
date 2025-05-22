@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Mobil;
 use App\Models\Barang;
+use App\Models\Dokter;
+use App\Models\Rental;
+use App\Models\Booking;
+use App\Models\Mahasiswa;
 use App\Models\Transaksi;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -28,6 +33,11 @@ class HomeController extends Controller
     {
         $jml_barang = Barang::count();
         $jml_transaksi = Transaksi::count();
-        return view('home',["barang" => $jml_barang,"transaksi" => $jml_transaksi]);
+        $mahasiswa = Mahasiswa::count();
+        $mobil = Mobil::count();
+        $rental = Rental::count();
+        $dokter = Dokter::count();
+        $booking = Booking::count();
+        return view('home',["barang" => $jml_barang,"transaksi" => $jml_transaksi,"mahasiswa" => $mahasiswa,"mobil" => $mobil,"rental" => $rental,"dokter" => $dokter,"booking" => $booking]);
     }
 }

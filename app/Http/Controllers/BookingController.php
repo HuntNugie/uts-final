@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Dokter;
 use App\Models\Booking;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -40,7 +41,7 @@ class BookingController extends Controller
 
         // cek hari apakah hari nya itu pas saat hari libur
         $dokter = Dokter::findOrFail($request->dokter_id);
-        if($request->hari === $dokter->libur){
+        if(Str::ucfirst($request->hari) === Str::ucfirst($dokter->libur)){
             return back()->with("error","Di hari tersebut dokter sedang libur bertugas");
         }
         $pasien = Booking::all();
