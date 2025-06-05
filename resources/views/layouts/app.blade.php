@@ -9,7 +9,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="{{ asset("template/img") }}/icon.png" rel="icon">
+    <link href="{{ secure_asset("template/img/icon.png") }}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,15 +21,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <!-- Libraries Stylesheet -->
-    <link href="{{ asset("template/lib") }}/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="{{ asset("template/lib") }}/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="{{ secure_asset("template/lib/owlcarousel/secure_assets/owl.carousel.min.css") }}" rel="stylesheet">
+    <link href="{{ secure_asset("template/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css") }}" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 
     <!-- Template Stylesheet -->
-    <link href="{{ asset("template") }}/css/style.css" rel="stylesheet">
+    <link href="{{ secure_asset("template/css/style.css") }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.datatables.net/2.3.1/css/dataTables.dataTables.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
@@ -104,15 +104,15 @@ draggable: true
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{ asset("template/lib") }}/chart/chart.min.js"></script>
-    <script src="{{ asset("template/lib") }}/easing/easing.min.js"></script>
-    <script src="{{ asset("template/lib") }}/waypoints/waypoints.min.js"></script>
-    <script src="{{ asset("template/lib") }}/owlcarousel/owl.carousel.min.js"></script>
-    <script src="{{ asset("template/lib") }}/tempusdominus/js/moment.min.js"></script>
-    <script src="{{ asset("template/lib") }}/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="{{ asset("template/lib") }}/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="{{ secure_asset("template/lib/chart/chart.min.js") }}"></script>
+    <script src="{{ secure_asset("template/lib/easing/easing.min.js") }}"></script>
+    <script src="{{ secure_asset("template/lib/waypoints/waypoints.min.js") }}"></script>
+    <script src="{{ secure_asset("template/lib/owlcarousel/owl.carousel.min.js") }}"></script>
+    <script src="{{ secure_asset("template/lib/tempusdominus/js/moment.min.js") }}"></script>
+    <script src="{{ secure_asset("template/lib/tempusdominus/js/moment-timezone.min.js") }}"></script>
+    <script src="{{ secure_asset("template/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js") }}"></script>
     <!-- Template Javascript -->
-    <script src="{{ asset("template") }}/js/main.js"></script>
+    <script src="{{ secure_asset("template/js/main.js") }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.datatables.net/2.3.1/js/dataTables.min.js"></script>
     <script>
