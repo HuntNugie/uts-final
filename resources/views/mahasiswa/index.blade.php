@@ -30,7 +30,8 @@
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $maha->nm_mahasiswa }}</td>
-                                <td><img src="{{ secure_asset("storage/$maha->foto") }}" alt="" height="200px" width="200px"></td>
+
+                                <td><img src="{{ secure_asset('storage') }}/{{ $maha->foto }}" alt="" height="200px" width="200px"></td>
                                 <td>{{ $maha->nim }}</td>
                                 <td>{{ $maha->nilai_rata_rata }}</td>
                                 <td>
