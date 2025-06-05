@@ -70,7 +70,7 @@
                     </div>
                 </div>
                 <div class="col-12">
-                    <img src="{{ asset("storage") }}/{{ $mahasiswa->foto }}" height="200px" width="200px" alt="">
+                    <img src="{{ secure_asset("storage") }}/{{ $mahasiswa->foto }}" height="200px" width="200px" alt="">
 
                 </div>
                 <div class="col-12">

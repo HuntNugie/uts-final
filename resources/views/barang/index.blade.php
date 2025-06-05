@@ -30,7 +30,7 @@
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $barang->nm_barang }}</td>
-                                <td><img src="{{ asset('storage') }}/{{ $barang->foto }}" alt="" height="200px" width="200px"></td>
+                                <td><img src="{{ secure_asset('storage') }}/{{ $barang->foto }}" alt="" height="200px" width="200px"></td>
                                 <td>{{ $barang->kd_barang }}</td>
                                 <td>{{ $barang->stok }}</td>
                                 <td>{{ Number::currency($barang->harga,"IDR") }} </td>
